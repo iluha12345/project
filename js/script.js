@@ -1,7 +1,19 @@
-let answers = [];
+let numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели,','');
 
-answers[0]=prompt('What is your name?', '');
-answers[1]=prompt('What is your surname?', '');
-answers[2]=prompt('How old are you?', '');
+const personalMovieDb = {
+    count: numberOfFilms,  
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-document.write(`His name is: ${answers[0]}, his surname is: ${answers[1]}, he is ${answers[2]} years old`);
+const a = prompt('Один из последних просмотренных фильмов?',''),
+      b = prompt('На сколько оцените его?',''),
+      c = prompt('Один из последних просмотренных фильмов?',''),
+      d = prompt('На сколько оцените его?','');
+
+personalMovieDb.movies[a] = b;
+personalMovieDb.movies[c] = d;
+
+console.log(personalMovieDb);

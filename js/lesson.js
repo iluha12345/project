@@ -1,8 +1,20 @@
-for (let i = 1; i <= 10; i++) {
-    if (i % 2 === 0) {
-        console.log(`${i} chetnoe`);
+const func = (num, times) => {
+    if (typeof (times) !== 'number' || times <= 0) {
+        return num;
     }
-    else if (i % 2 !== 0) {
-        console.log(`${i} nechetnoe`);
+
+    let str = '';
+    for (let i = 1; i <= times; i++) {
+
+        if (i == times) {
+            str += `${num * i}`;
+        } else {
+            str += `${num * i}---`;
+        }
+
+
     }
+    return str;
 }
+
+console.log(func(5, 3));
